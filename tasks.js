@@ -16,6 +16,7 @@ router.get('/', (req, res, next) => {
   }
 });
 
+
 // Get a task by ID
 router.get('/:id', (req, res, next) => {
   const task = tasks.find(t => t.id === parseInt(req.params.id));
@@ -26,6 +27,7 @@ router.get('/:id', (req, res, next) => {
   }
   res.json(task);
 });
+
 
 // Create a new task
 router.post(
